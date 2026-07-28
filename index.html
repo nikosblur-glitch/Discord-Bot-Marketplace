@@ -746,6 +746,3694 @@
     }
 
   </script>
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Support | Discord Bot Marketplace</title>
+
+  <meta
+    name="description"
+    content="Get help and contact Discord Bot Marketplace Support."
+  >
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Inter, Arial, sans-serif;
+    }
+
+    body {
+      background: #08090d;
+      color: white;
+      min-height: 100vh;
+    }
+
+    /* Background Glow */
+
+    body::before {
+      content: "";
+      position: fixed;
+      width: 600px;
+      height: 600px;
+      background: #5865f2;
+      filter: blur(180px);
+      opacity: 0.12;
+      top: -250px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+    }
+
+    /* Navbar */
+
+    nav {
+      width: 100%;
+      padding: 20px 7%;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+
+      background: rgba(8,9,13,0.75);
+
+      backdrop-filter: blur(15px);
+
+      position: sticky;
+      top: 0;
+
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .logo span {
+      color: #5865f2;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    nav ul li a {
+      color: #aaa;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: white;
+    }
+
+    .nav-btn {
+      background: #5865f2;
+      padding: 10px 18px;
+      border-radius: 10px;
+
+      color: white;
+      text-decoration: none;
+
+      font-size: 14px;
+      font-weight: 700;
+
+      transition: 0.3s;
+    }
+
+    .nav-btn:hover {
+      background: #4752c4;
+      transform: translateY(-2px);
+    }
+
+    /* Hero */
+
+    .hero {
+      text-align: center;
+
+      padding: 80px 20px 50px;
+
+      max-width: 900px;
+
+      margin: auto;
+    }
+
+    .badge {
+      display: inline-block;
+
+      padding: 8px 15px;
+
+      border: 1px solid rgba(88,101,242,0.4);
+
+      background: rgba(88,101,242,0.1);
+
+      color: #8f99ff;
+
+      border-radius: 50px;
+
+      font-size: 13px;
+
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 6vw, 70px);
+
+      line-height: 1;
+
+      letter-spacing: -3px;
+
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #5865f2;
+    }
+
+    .hero p {
+      color: #999;
+
+      font-size: 17px;
+
+      max-width: 650px;
+
+      margin: auto;
+
+      line-height: 1.7;
+    }
+
+    /* Support Container */
+
+    .support-container {
+
+      max-width: 1100px;
+
+      margin: 20px auto 100px;
+
+      padding: 0 25px;
+
+      display: grid;
+
+      grid-template-columns: 1fr 1.5fr;
+
+      gap: 25px;
+    }
+
+    /* Left Side */
+
+    .support-info {
+
+      background: linear-gradient(
+        145deg,
+        #12131a,
+        #0e0f14
+      );
+
+      border: 1px solid #242630;
+
+      border-radius: 20px;
+
+      padding: 30px;
+
+      height: fit-content;
+    }
+
+    .support-info h2 {
+      font-size: 24px;
+
+      margin-bottom: 12px;
+    }
+
+    .support-info > p {
+      color: #888;
+
+      line-height: 1.6;
+
+      font-size: 14px;
+
+      margin-bottom: 25px;
+    }
+
+    .support-option {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 15px;
+
+      padding: 15px;
+
+      background: #0b0c10;
+
+      border: 1px solid #20222b;
+
+      border-radius: 12px;
+
+      margin-bottom: 12px;
+
+      transition: 0.3s;
+    }
+
+    .support-option:hover {
+      border-color: #5865f2;
+
+      transform: translateX(4px);
+    }
+
+    .support-icon {
+
+      width: 45px;
+
+      height: 45px;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      background: rgba(88,101,242,0.15);
+
+      border-radius: 10px;
+
+      font-size: 20px;
+    }
+
+    .support-option h3 {
+      font-size: 15px;
+
+      margin-bottom: 4px;
+    }
+
+    .support-option p {
+      color: #777;
+
+      font-size: 12px;
+    }
+
+    .discord-button {
+
+      display: block;
+
+      text-align: center;
+
+      background: #5865f2;
+
+      color: white;
+
+      text-decoration: none;
+
+      padding: 13px;
+
+      border-radius: 10px;
+
+      margin-top: 20px;
+
+      font-weight: 700;
+
+      transition: 0.3s;
+    }
+
+    .discord-button:hover {
+      background: #4752c4;
+
+      transform: translateY(-2px);
+    }
+
+    /* Form */
+
+    .support-form {
+
+      background: linear-gradient(
+        145deg,
+        #12131a,
+        #0e0f14
+      );
+
+      border: 1px solid #242630;
+
+      border-radius: 20px;
+
+      padding: 30px;
+    }
+
+    .support-form h2 {
+      font-size: 24px;
+
+      margin-bottom: 8px;
+    }
+
+    .support-form > p {
+      color: #777;
+
+      font-size: 14px;
+
+      margin-bottom: 25px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+
+      margin-bottom: 8px;
+
+      font-size: 13px;
+
+      color: #ccc;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+
+      width: 100%;
+
+      padding: 14px;
+
+      background: #0b0c10;
+
+      border: 1px solid #292b35;
+
+      border-radius: 10px;
+
+      color: white;
+
+      outline: none;
+
+      font-size: 14px;
+
+      transition: 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+
+      border-color: #5865f2;
+
+      box-shadow:
+        0 0 0 3px
+        rgba(88,101,242,0.1);
+    }
+
+    .form-group select {
+      cursor: pointer;
+    }
+
+    .form-group textarea {
+
+      min-height: 140px;
+
+      resize: vertical;
+    }
+
+    .submit-button {
+
+      width: 100%;
+
+      padding: 15px;
+
+      border: none;
+
+      border-radius: 10px;
+
+      background: #5865f2;
+
+      color: white;
+
+      font-size: 15px;
+
+      font-weight: 700;
+
+      cursor: pointer;
+
+      transition: 0.3s;
+    }
+
+    .submit-button:hover {
+
+      background: #4752c4;
+
+      transform: translateY(-2px);
+
+      box-shadow:
+        0 10px 30px
+        rgba(88,101,242,0.2);
+    }
+
+    /* Success Message */
+
+    #successMessage {
+
+      display: none;
+
+      margin-top: 20px;
+
+      padding: 15px;
+
+      border-radius: 10px;
+
+      background: rgba(67,181,129,0.1);
+
+      border: 1px solid rgba(67,181,129,0.3);
+
+      color: #43b581;
+
+      text-align: center;
+
+      font-size: 14px;
+    }
+
+    /* FAQ */
+
+    .faq {
+
+      max-width: 1100px;
+
+      margin: 0 auto 100px;
+
+      padding: 0 25px;
+    }
+
+    .faq-title {
+
+      text-align: center;
+
+      margin-bottom: 35px;
+    }
+
+    .faq-title h2 {
+      font-size: 32px;
+    }
+
+    .faq-title p {
+
+      color: #777;
+
+      margin-top: 8px;
+    }
+
+    .faq-item {
+
+      background: #111218;
+
+      border: 1px solid #242630;
+
+      border-radius: 12px;
+
+      padding: 20px;
+
+      margin-bottom: 12px;
+
+      cursor: pointer;
+
+      transition: 0.3s;
+    }
+
+    .faq-item:hover {
+
+      border-color: #5865f2;
+    }
+
+    .faq-question {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      font-weight: 700;
+
+      font-size: 15px;
+    }
+
+    .faq-answer {
+
+      display: none;
+
+      color: #888;
+
+      line-height: 1.6;
+
+      font-size: 14px;
+
+      margin-top: 15px;
+    }
+
+    .faq-item.active .faq-answer {
+
+      display: block;
+    }
+
+    .faq-item.active .arrow {
+
+      transform: rotate(180deg);
+    }
+
+    .arrow {
+
+      transition: 0.3s;
+    }
+
+    /* Footer */
+
+    footer {
+
+      border-top: 1px solid #1d1e25;
+
+      padding: 35px 7%;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      color: #666;
+
+      font-size: 13px;
+    }
+
+    footer span {
+      color: #5865f2;
+    }
+
+    /* Mobile */
+
+    @media (max-width: 800px) {
+
+      nav ul {
+        display: none;
+      }
+
+      .support-container {
+
+        grid-template-columns: 1fr;
+
+      }
+
+      .hero {
+
+        padding-top: 60px;
+
+      }
+
+      footer {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+        text-align: center;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <div class="logo">
+
+      Discord
+      <span>Bot Marketplace</span>
+
+    </div>
+
+
+    <ul>
+
+      <li>
+        <a href="index.html">
+          Marketplace
+        </a>
+      </li>
+
+      <li>
+        <a href="index.html#about">
+          About
+        </a>
+      </li>
+
+      <li>
+        <a href="support.html">
+          Support
+        </a>
+      </li>
+
+    </ul>
+
+
+    <a
+      href="index.html"
+      class="nav-btn"
+    >
+      Back to Marketplace
+    </a>
+
+  </nav>
+
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="badge">
+
+      💬 We're here to help
+
+    </div>
+
+
+    <h1>
+
+      How can we
+      <span>help?</span>
+
+    </h1>
+
+
+    <p>
+
+      Need help with your Discord bot?
+      Have a question about your purchase?
+      Contact our support team and we'll help you as soon as possible.
+
+    </p>
+
+  </section>
+
+
+
+  <!-- SUPPORT -->
+
+  <section class="support-container">
+
+
+    <!-- SUPPORT INFO -->
+
+    <div class="support-info">
+
+      <h2>
+        Contact Support
+      </h2>
+
+
+      <p>
+
+        Choose the best way to get help
+        from our team.
+
+      </p>
+
+
+      <div class="support-option">
+
+        <div class="support-icon">
+          🎫
+        </div>
+
+        <div>
+
+          <h3>
+            Support Ticket
+          </h3>
+
+          <p>
+            Create a ticket for assistance.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="support-option">
+
+        <div class="support-icon">
+          💬
+        </div>
+
+        <div>
+
+          <h3>
+            Discord Community
+          </h3>
+
+          <p>
+            Join our Discord server.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="support-option">
+
+        <div class="support-icon">
+          ⚡
+        </div>
+
+        <div>
+
+          <h3>
+            Fast Response
+          </h3>
+
+          <p>
+            We'll respond as soon as possible.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- CHANGE THIS LINK -->
+
+      <a
+        href="https://discord.com"
+        target="_blank"
+        class="discord-button"
+      >
+
+        💬 Join our Discord
+
+      </a>
+
+    </div>
+
+
+
+    <!-- SUPPORT FORM -->
+
+    <div class="support-form">
+
+      <h2>
+        Create a Support Request
+      </h2>
+
+
+      <p>
+
+        Fill in the form below and
+        tell us how we can help.
+
+      </p>
+
+
+      <form
+        id="supportForm"
+        onsubmit="submitTicket(event)"
+      >
+
+
+        <div class="form-group">
+
+          <label>
+            Discord Username
+          </label>
+
+          <input
+            type="text"
+            id="username"
+            placeholder="example: username"
+            required
+          >
+
+        </div>
+
+
+
+        <div class="form-group">
+
+          <label>
+            Email Address
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            placeholder="you@example.com"
+            required
+          >
+
+        </div>
+
+
+
+        <div class="form-group">
+
+          <label>
+            Support Category
+          </label>
+
+          <select
+            id="category"
+            required
+          >
+
+            <option value="">
+              Select a category
+            </option>
+
+            <option>
+              Purchase Problem
+            </option>
+
+            <option>
+              Bot Problem
+            </option>
+
+            <option>
+              Technical Support
+            </option>
+
+            <option>
+              Payment Problem
+            </option>
+
+            <option>
+              Other
+            </option>
+
+          </select>
+
+        </div>
+
+
+
+        <div class="form-group">
+
+          <label>
+            Your Message
+          </label>
+
+          <textarea
+            id="message"
+            placeholder="Explain your problem..."
+            required
+          ></textarea>
+
+        </div>
+
+
+
+        <button
+          type="submit"
+          class="submit-button"
+        >
+
+          Send Support Request
+
+        </button>
+
+
+        <div id="successMessage">
+
+          ✅ Your support request has been submitted successfully!
+
+        </div>
+
+
+      </form>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- FAQ -->
+
+  <section class="faq">
+
+
+    <div class="faq-title">
+
+      <h2>
+        Frequently Asked Questions
+      </h2>
+
+      <p>
+        Find quick answers to common questions.
+      </p>
+
+    </div>
+
+
+
+    <div
+      class="faq-item"
+      onclick="toggleFAQ(this)"
+    >
+
+      <div class="faq-question">
+
+        <span>
+          How do I purchase a bot?
+        </span>
+
+        <span class="arrow">
+          ▼
+        </span>
+
+      </div>
+
+
+      <div class="faq-answer">
+
+        Choose the bot you want from our marketplace
+        and click the Buy Now button.
+        Follow the checkout instructions to complete
+        your purchase.
+
+      </div>
+
+    </div>
+
+
+
+    <div
+      class="faq-item"
+      onclick="toggleFAQ(this)"
+    >
+
+      <div class="faq-question">
+
+        <span>
+          I purchased a bot. How do I receive it?
+        </span>
+
+        <span class="arrow">
+          ▼
+        </span>
+
+      </div>
+
+
+      <div class="faq-answer">
+
+        After your purchase is confirmed,
+        you will receive instructions about
+        accessing your bot and the necessary files.
+
+      </div>
+
+    </div>
+
+
+
+    <div
+      class="faq-item"
+      onclick="toggleFAQ(this)"
+    >
+
+      <div class="faq-question">
+
+        <span>
+          What if my bot is not working?
+        </span>
+
+        <span class="arrow">
+          ▼
+        </span>
+
+      </div>
+
+
+      <div class="faq-answer">
+
+        Contact our support team using the
+        support form above or join our Discord server.
+        Our team will help you troubleshoot the problem.
+
+      </div>
+
+    </div>
+
+
+
+    <div
+      class="faq-item"
+      onclick="toggleFAQ(this)"
+    >
+
+      <div class="faq-question">
+
+        <span>
+          How long does support take to respond?
+        </span>
+
+        <span class="arrow">
+          ▼
+        </span>
+
+      </div>
+
+
+      <div class="faq-answer">
+
+        Response times may vary depending on the
+        number of requests, but our team will try
+        to respond as quickly as possible.
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div>
+
+      © 2026
+      <span>
+        Discord Bot Marketplace
+      </span>
+
+    </div>
+
+
+    <div>
+
+      Premium Discord Bots.
+      Built for Communities.
+
+    </div>
+
+  </footer>
+
+
+
+  <script>
+
+
+    /* SUPPORT FORM */
+
+    function submitTicket(event) {
+
+      event.preventDefault();
+
+
+      const username =
+        document.getElementById(
+          "username"
+        ).value;
+
+
+      const email =
+        document.getElementById(
+          "email"
+        ).value;
+
+
+      const category =
+        document.getElementById(
+          "category"
+        ).value;
+
+
+      const message =
+        document.getElementById(
+          "message"
+        ).value;
+
+
+      if (
+        username &&
+        email &&
+        category &&
+        message
+      ) {
+
+
+        document.getElementById(
+          "successMessage"
+        ).style.display = "block";
+
+
+        document.getElementById(
+          "supportForm"
+        ).reset();
+
+
+        setTimeout(function() {
+
+          document.getElementById(
+            "successMessage"
+          ).style.display = "none";
+
+        }, 5000);
+
+      }
+
+    }
+
+
+
+    /* FAQ */
+
+    function toggleFAQ(element) {
+
+      element.classList.toggle(
+        "active"
+      );
+
+    }
+
+
+  </script>
+
+
+</body>
+
+</html>
+```
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Guardian Bot | Discord Bot Marketplace</title>
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Inter, Arial, sans-serif;
+    }
+
+    body {
+      background: #08090d;
+      color: white;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      width: 600px;
+      height: 600px;
+      background: #5865f2;
+      filter: blur(180px);
+      opacity: 0.12;
+      top: -250px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+    }
+
+    /* NAVBAR */
+
+    nav {
+      width: 100%;
+      padding: 20px 7%;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+
+      background: rgba(8,9,13,0.8);
+
+      backdrop-filter: blur(15px);
+
+      position: sticky;
+      top: 0;
+
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    .logo span {
+      color: #5865f2;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    nav ul li a {
+      color: #aaa;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: white;
+    }
+
+    .back-btn {
+      background: #5865f2;
+      color: white;
+
+      padding: 10px 18px;
+
+      border-radius: 10px;
+
+      text-decoration: none;
+
+      font-size: 14px;
+
+      font-weight: 700;
+
+      transition: 0.3s;
+    }
+
+    .back-btn:hover {
+      background: #4752c4;
+      transform: translateY(-2px);
+    }
+
+    /* MAIN */
+
+    .container {
+
+      max-width: 1100px;
+
+      margin: 70px auto 100px;
+
+      padding: 0 25px;
+
+    }
+
+    /* BOT HEADER */
+
+    .bot-header {
+
+      display: grid;
+
+      grid-template-columns: 250px 1fr;
+
+      gap: 45px;
+
+      align-items: center;
+
+      margin-bottom: 60px;
+
+    }
+
+    .bot-icon {
+
+      width: 250px;
+
+      height: 250px;
+
+      border-radius: 30px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #5865f2,
+          #8b5cf6
+        );
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      font-size: 100px;
+
+      box-shadow:
+        0 20px 70px
+        rgba(88,101,242,0.25);
+
+    }
+
+    .bot-info h1 {
+
+      font-size: 55px;
+
+      letter-spacing: -3px;
+
+      margin-bottom: 15px;
+
+    }
+
+    .bot-info h1 span {
+
+      color: #5865f2;
+
+    }
+
+    .description {
+
+      color: #999;
+
+      font-size: 17px;
+
+      line-height: 1.7;
+
+      max-width: 650px;
+
+    }
+
+    .rating {
+
+      color: #f5c542;
+
+      margin-top: 20px;
+
+      font-size: 15px;
+
+    }
+
+    /* PRICE */
+
+    .purchase-box {
+
+      margin-top: 25px;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 20px;
+
+      flex-wrap: wrap;
+
+    }
+
+    .price {
+
+      font-size: 32px;
+
+      font-weight: 800;
+
+    }
+
+    .buy-button {
+
+      background: #5865f2;
+
+      color: white;
+
+      border: none;
+
+      padding: 15px 30px;
+
+      border-radius: 12px;
+
+      font-size: 15px;
+
+      font-weight: 700;
+
+      cursor: pointer;
+
+      transition: 0.3s;
+
+    }
+
+    .buy-button:hover {
+
+      background: #4752c4;
+
+      transform: translateY(-3px);
+
+      box-shadow:
+        0 10px 30px
+        rgba(88,101,242,0.3);
+
+    }
+
+    /* FEATURES */
+
+    .section-title {
+
+      margin-bottom: 25px;
+
+    }
+
+    .section-title h2 {
+
+      font-size: 30px;
+
+    }
+
+    .section-title p {
+
+      color: #777;
+
+      margin-top: 7px;
+
+    }
+
+    .features {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          auto-fit,
+          minmax(230px, 1fr)
+        );
+
+      gap: 18px;
+
+      margin-bottom: 60px;
+
+    }
+
+    .feature {
+
+      background: #111218;
+
+      border: 1px solid #242630;
+
+      border-radius: 15px;
+
+      padding: 25px;
+
+      transition: 0.3s;
+
+    }
+
+    .feature:hover {
+
+      border-color: #5865f2;
+
+      transform: translateY(-5px);
+
+    }
+
+    .feature-icon {
+
+      font-size: 30px;
+
+      margin-bottom: 15px;
+
+    }
+
+    .feature h3 {
+
+      margin-bottom: 8px;
+
+    }
+
+    .feature p {
+
+      color: #888;
+
+      font-size: 14px;
+
+      line-height: 1.6;
+
+    }
+
+    /* DETAILS */
+
+    .details {
+
+      background: #111218;
+
+      border: 1px solid #242630;
+
+      border-radius: 18px;
+
+      padding: 30px;
+
+      margin-bottom: 60px;
+
+    }
+
+    .details h2 {
+
+      margin-bottom: 25px;
+
+    }
+
+    .detail-row {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      padding: 15px 0;
+
+      border-bottom: 1px solid #242630;
+
+    }
+
+    .detail-row:last-child {
+
+      border-bottom: none;
+
+    }
+
+    .detail-row span:first-child {
+
+      color: #777;
+
+    }
+
+    .detail-row span:last-child {
+
+      font-weight: 700;
+
+    }
+
+    /* CTA */
+
+    .cta {
+
+      text-align: center;
+
+      background:
+        linear-gradient(
+          135deg,
+          #12131a,
+          #171928
+        );
+
+      border: 1px solid #242630;
+
+      border-radius: 20px;
+
+      padding: 50px 25px;
+
+    }
+
+    .cta h2 {
+
+      font-size: 32px;
+
+      margin-bottom: 12px;
+
+    }
+
+    .cta p {
+
+      color: #888;
+
+      margin-bottom: 25px;
+
+    }
+
+    /* FOOTER */
+
+    footer {
+
+      border-top: 1px solid #1d1e25;
+
+      padding: 35px 7%;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      color: #666;
+
+      font-size: 13px;
+
+    }
+
+    footer span {
+
+      color: #5865f2;
+
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 750px) {
+
+      nav ul {
+
+        display: none;
+
+      }
+
+      .bot-header {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+      }
+
+      .bot-icon {
+
+        margin: auto;
+
+      }
+
+      .description {
+
+        margin: auto;
+
+      }
+
+      .purchase-box {
+
+        justify-content: center;
+
+      }
+
+      .bot-info h1 {
+
+        font-size: 42px;
+
+      }
+
+      .detail-row {
+
+        flex-direction: column;
+
+        gap: 5px;
+
+      }
+
+      footer {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+        text-align: center;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <div class="logo">
+
+      Discord
+
+      <span>
+
+        Bot Marketplace
+
+      </span>
+
+    </div>
+
+
+    <ul>
+
+      <li>
+
+        <a href="index.html">
+
+          Marketplace
+
+        </a>
+
+      </li>
+
+      <li>
+
+        <a href="support.html">
+
+          Support
+
+        </a>
+
+      </li>
+
+    </ul>
+
+
+    <a
+      href="index.html"
+      class="back-btn"
+    >
+
+      ← Back to Marketplace
+
+    </a>
+
+  </nav>
+
+
+
+  <!-- MAIN -->
+
+  <main class="container">
+
+
+    <!-- BOT HEADER -->
+
+    <section class="bot-header">
+
+
+      <div class="bot-icon">
+
+        🛡️
+
+      </div>
+
+
+      <div class="bot-info">
+
+
+        <h1>
+
+          Guardian
+
+          <span>
+
+            Bot
+
+          </span>
+
+        </h1>
+
+
+        <p class="description">
+
+          Guardian Bot is an advanced Discord
+          moderation and security bot designed
+          to protect your community, manage your
+          server and keep your members safe.
+
+        </p>
+
+
+        <div class="rating">
+
+          ⭐⭐⭐⭐⭐
+
+          <strong>
+
+            5.0
+
+          </strong>
+
+          — 120+ Reviews
+
+        </div>
+
+
+        <div class="purchase-box">
+
+
+          <div class="price">
+
+            €9.99
+
+          </div>
+
+
+          <button
+            class="buy-button"
+            onclick="buyBot()"
+          >
+
+            🛒 Buy Guardian Bot
+
+          </button>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- FEATURES -->
+
+    <section>
+
+
+      <div class="section-title">
+
+        <h2>
+
+          Powerful Features
+
+        </h2>
+
+        <p>
+
+          Everything you need to protect
+          and manage your Discord server.
+
+        </p>
+
+      </div>
+
+
+      <div class="features">
+
+
+        <div class="feature">
+
+          <div class="feature-icon">
+
+            🛡️
+
+          </div>
+
+          <h3>
+
+            Advanced Moderation
+
+          </h3>
+
+          <p>
+
+            Automatically manage your community
+            with powerful moderation commands.
+
+          </p>
+
+        </div>
+
+
+        <div class="feature">
+
+          <div class="feature-icon">
+
+            🚨
+
+          </div>
+
+          <h3>
+
+            Anti-Raid Protection
+
+          </h3>
+
+          <p>
+
+            Protect your Discord server against
+            raids and suspicious activity.
+
+          </p>
+
+        </div>
+
+
+        <div class="feature">
+
+          <div class="feature-icon">
+
+            🔨
+
+          </div>
+
+          <h3>
+
+            Auto Moderation
+
+          </h3>
+
+          <p>
+
+            Automatically detect spam,
+            bad words and unwanted content.
+
+          </p>
+
+        </div>
+
+
+        <div class="feature">
+
+          <div class="feature-icon">
+
+            📊
+
+          </div>
+
+          <h3>
+
+            Server Logs
+
+          </h3>
+
+          <p>
+
+            Keep track of important server events
+            with detailed logging.
+
+          </p>
+
+        </div>
+
+
+        <div class="feature">
+
+          <div class="feature-icon">
+
+            ⚙️
+
+          </div>
+
+          <h3>
+
+            Easy Setup
+
+          </h3>
+
+          <p>
+
+            Configure your bot quickly and
+            easily with simple commands.
+
+          </p>
+
+        </div>
+
+
+        <div class="feature">
+
+          <div class="feature-icon">
+
+            ⚡
+
+          </div>
+
+          <h3>
+
+            Fast Performance
+
+          </h3>
+
+          <p>
+
+            Optimized for fast response times
+            and reliable performance.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- DETAILS -->
+
+    <section class="details">
+
+      <h2>
+
+        Bot Information
+
+      </h2>
+
+
+      <div class="detail-row">
+
+        <span>
+
+          Version
+
+        </span>
+
+        <span>
+
+          v2.5.0
+
+        </span>
+
+      </div>
+
+
+      <div class="detail-row">
+
+        <span>
+
+          Category
+
+        </span>
+
+        <span>
+
+          Moderation
+
+        </span>
+
+      </div>
+
+
+      <div class="detail-row">
+
+        <span>
+
+          Language
+
+        </span>
+
+        <span>
+
+          JavaScript
+
+        </span>
+
+      </div>
+
+
+      <div class="detail-row">
+
+        <span>
+
+          Discord.js
+
+        </span>
+
+        <span>
+
+          v14
+
+        </span>
+
+      </div>
+
+
+      <div class="detail-row">
+
+        <span>
+
+          Support
+
+        </span>
+
+        <span>
+
+          24/7 Community Support
+
+        </span>
+
+      </div>
+
+
+      <div class="detail-row">
+
+        <span>
+
+          Updates
+
+        </span>
+
+        <span>
+
+          Free Updates
+
+        </span>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+      <h2>
+
+        Ready to protect your server?
+
+      </h2>
+
+
+      <p>
+
+        Get Guardian Bot today and
+        take your Discord server to the next level.
+
+      </p>
+
+
+      <button
+        class="buy-button"
+        onclick="buyBot()"
+      >
+
+        🛒 Get Guardian Bot — €9.99
+
+      </button>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div>
+
+      © 2026
+
+      <span>
+
+        Discord Bot Marketplace
+
+      </span>
+
+    </div>
+
+
+    <div>
+
+      Premium Discord Bots.
+      Built for Communities.
+
+    </div>
+
+  </footer>
+
+
+
+  <script>
+
+    function buyBot() {
+
+      alert(
+
+        "Guardian Bot selected! " +
+        "The checkout system will be available soon."
+
+      );
+
+    }
+
+  </script>
+
+
+</body>
+
+</html>
+```
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+Reviews & Payments | Discord Bot Marketplace
+</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+
+    background: #08090d;
+
+    color: white;
+
+    min-height: 100vh;
+
+}
+
+nav {
+
+    height: 70px;
+
+    padding: 0 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: #0b0c11;
+
+    border-bottom: 1px solid #242630;
+
+}
+
+.logo {
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+}
+
+.logo span {
+
+    color: #5865f2;
+
+}
+
+.nav-links {
+
+    display: flex;
+
+    gap: 25px;
+
+}
+
+.nav-links a {
+
+    color: #aaa;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+}
+
+.nav-links a:hover {
+
+    color: white;
+
+}
+
+.back-button {
+
+    background: #5865f2;
+
+    color: white;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+}
+
+
+/* HERO */
+
+.hero {
+
+    text-align: center;
+
+    padding: 80px 20px 50px;
+
+}
+
+.hero h1 {
+
+    font-size: 55px;
+
+    margin-bottom: 20px;
+
+}
+
+.hero h1 span {
+
+    color: #5865f2;
+
+}
+
+.hero p {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #999;
+
+    line-height: 1.7;
+
+}
+
+
+/* CONTAINER */
+
+.container {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 20px 25px 100px;
+
+}
+
+
+/* TRUST */
+
+.trust-section {
+
+    background: #111218;
+
+    border: 1px solid #242630;
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    margin-bottom: 30px;
+
+}
+
+.section-title {
+
+    margin-bottom: 25px;
+
+}
+
+.section-title h2 {
+
+    font-size: 30px;
+
+}
+
+.section-title p {
+
+    color: #777;
+
+    margin-top: 8px;
+
+}
+
+
+/* REVIEWS */
+
+.reviews {
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(
+        auto-fit,
+        minmax(250px, 1fr)
+    );
+
+    gap: 18px;
+
+}
+
+.review {
+
+    background: #0b0c10;
+
+    border: 1px solid #242630;
+
+    border-radius: 15px;
+
+    padding: 22px;
+
+    transition: 0.3s;
+
+}
+
+.review:hover {
+
+    border-color: #5865f2;
+
+    transform: translateY(-4px);
+
+}
+
+.review-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+
+}
+
+.review-name {
+
+    font-weight: bold;
+
+}
+
+.verified {
+
+    color: #43b581;
+
+    font-size: 12px;
+
+}
+
+.stars {
+
+    color: #f5c542;
+
+    margin-bottom: 10px;
+
+}
+
+.review p {
+
+    color: #999;
+
+    line-height: 1.6;
+
+    font-size: 14px;
+
+}
+
+
+/* PAYMENTS */
+
+.payment-section {
+
+    background: #111218;
+
+    border: 1px solid #242630;
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    margin-bottom: 30px;
+
+}
+
+.payment-methods {
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(
+        auto-fit,
+        minmax(250px, 1fr)
+    );
+
+    gap: 20px;
+
+}
+
+.payment-card {
+
+    background: #0b0c10;
+
+    border: 1px solid #242630;
+
+    border-radius: 15px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    transition: 0.3s;
+
+}
+
+.payment-card:hover {
+
+    border-color: #5865f2;
+
+    transform: translateY(-4px);
+
+}
+
+.payment-logo {
+
+    font-size: 45px;
+
+    margin-bottom: 15px;
+
+}
+
+.payment-card h3 {
+
+    margin-bottom: 10px;
+
+}
+
+.payment-card p {
+
+    color: #888;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+
+/* TRUST BADGES */
+
+.badges {
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(
+        auto-fit,
+        minmax(200px, 1fr)
+    );
+
+    gap: 15px;
+
+}
+
+.badge {
+
+    text-align: center;
+
+    padding: 20px;
+
+    background: #0b0c10;
+
+    border: 1px solid #242630;
+
+    border-radius: 12px;
+
+}
+
+.badge-icon {
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+
+}
+
+.badge h3 {
+
+    font-size: 15px;
+
+    margin-bottom: 5px;
+
+}
+
+.badge p {
+
+    color: #777;
+
+    font-size: 12px;
+
+}
+
+
+/* FOOTER */
+
+footer {
+
+    padding: 30px;
+
+    text-align: center;
+
+    border-top: 1px solid #242630;
+
+    color: #666;
+
+}
+
+footer span {
+
+    color: #5865f2;
+
+}
+
+
+/* MOBILE */
+
+@media(max-width: 700px) {
+
+    .nav-links {
+
+        display: none;
+
+    }
+
+    .hero h1 {
+
+        font-size: 42px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+
+<div class="logo">
+
+Discord
+
+<span>
+
+Bot Marketplace
+
+</span>
+
+</div>
+
+
+<div class="nav-links">
+
+<a href="index.html">
+
+Marketplace
+
+</a>
+
+<a href="support.html">
+
+Support
+
+</a>
+
+<a href="reviews.html">
+
+Reviews
+
+</a>
+
+</a>
+
+</div>
+
+
+<a
+href="index.html"
+class="back-button"
+>
+
+Marketplace
+
+</a>
+
+
+</nav>
+
+
+
+<section class="hero">
+
+
+<h1>
+
+Trust &
+<span>
+Reviews
+</span>
+
+</h1>
+
+
+<p>
+
+See what our customers say about
+Discord Bot Marketplace and discover
+our available payment methods.
+
+</p>
+
+
+</section>
+
+
+
+<main class="container">
+
+
+<!-- REVIEWS -->
+
+
+<section class="trust-section">
+
+
+<div class="section-title">
+
+<h2>
+
+⭐ Customer Reviews
+
+</h2>
+
+<p>
+
+Feedback from our community.
+
+</p>
+
+</div>
+
+
+<div class="reviews">
+
+
+<div class="review">
+
+
+<div class="review-header">
+
+<div class="review-name">
+
+Alex
+
+</div>
+
+<div class="verified">
+
+✓ Verified Purchase
+
+</div>
+
+</div>
+
+
+<div class="stars">
+
+⭐⭐⭐⭐⭐
+
+</div>
+
+
+<p>
+
+"Guardian Bot works perfectly.
+The setup was easy and the support
+team helped me quickly."
+
+</p>
+
+
+</div>
+
+
+
+<div class="review">
+
+
+<div class="review-header">
+
+<div class="review-name">
+
+Nikos
+
+</div>
+
+<div class="verified">
+
+✓ Verified Purchase
+
+</div>
+
+</div>
+
+
+<div class="stars">
+
+⭐⭐⭐⭐⭐
+
+</div>
+
+
+<p>
+
+"Very clean bots and great service.
+I would definitely recommend
+this marketplace."
+
+</p>
+
+
+</div>
+
+
+
+<div class="review">
+
+
+<div class="review-header">
+
+<div class="review-name">
+
+Chris
+
+</div>
+
+<div class="verified">
+
+✓ Verified Purchase
+
+</div>
+
+</div>
+
+
+<div class="stars">
+
+⭐⭐⭐⭐⭐
+
+</div>
+
+
+<p>
+
+"Fast delivery and very good
+support. Everything worked
+as expected."
+
+</p>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- PAYMENTS -->
+
+
+<section class="payment-section">
+
+
+<div class="section-title">
+
+<h2>
+
+💳 Secure Payment Methods
+
+</h2>
+
+<p>
+
+Choose your preferred payment method
+at checkout.
+
+</p>
+
+</div>
+
+
+<div class="payment-methods">
+
+
+<div class="payment-card">
+
+
+<div class="payment-logo">
+
+💙
+
+</div>
+
+
+<h3>
+
+PayPal
+
+</h3>
+
+
+<p>
+
+Pay securely using PayPal.
+Payment availability depends
+on your checkout options.
+
+</p>
+
+
+</div>
+
+
+
+<div class="payment-card">
+
+
+<div class="payment-logo">
+
+💜
+
+</div>
+
+
+<h3>
+
+Revolut
+
+</h3>
+
+
+<p>
+
+Pay using Revolut through
+the payment details provided
+at checkout.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- TRUST BADGES -->
+
+
+<section class="trust-section">
+
+
+<div class="section-title">
+
+<h2>
+
+🔐 Why Choose Us?
+
+</h2>
+
+</div>
+
+
+<div class="badges">
+
+
+<div class="badge">
+
+<div class="badge-icon">
+
+🛡️
+
+</div>
+
+<h3>
+
+Secure Payments
+
+</h3>
+
+<p>
+
+Secure payment options
+for our customers.
+
+</p>
+
+</div>
+
+
+<div class="badge">
+
+<div class="badge-icon">
+
+⚡
+
+</div>
+
+<h3>
+
+Fast Delivery
+
+</h3>
+
+<p>
+
+Get your purchased bot
+quickly after payment.
+
+</p>
+
+</div>
+
+
+<div class="badge">
+
+<div class="badge-icon">
+
+💬
+
+</div>
+
+<h3>
+
+Customer Support
+
+</h3>
+
+<p>
+
+Our support team is here
+to help you.
+
+</p>
+
+</div>
+
+
+<div class="badge">
+
+<div class="badge-icon">
+
+⭐
+
+</div>
+
+<h3>
+
+Quality Bots
+
+</h3>
+
+<p>
+
+Professional Discord bots
+for your community.
+
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+</main>
+
+
+
+<footer>
+
+© 2026
+
+<span>
+
+Discord Bot Marketplace
+
+</span>
+
+</footer>
+
+
+</body>
+
+</html>
+```
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Support | Discord Bot Marketplace</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #08090d;
+    color: white;
+    min-height: 100vh;
+}
+
+nav {
+    height: 70px;
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #0b0c11;
+    border-bottom: 1px solid #242630;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #5865f2;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+.back-button {
+    background: #5865f2;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px 50px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #5865f2;
+}
+
+.hero p {
+    color: #999;
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+.support-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px 25px 100px;
+
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 25px;
+}
+
+.card {
+    background: #111218;
+    border: 1px solid #242630;
+    border-radius: 18px;
+    padding: 30px;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.card > p {
+    color: #888;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.support-option {
+    padding: 18px;
+    background: #0b0c10;
+    border: 1px solid #242630;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.support-option h3 {
+    margin-bottom: 5px;
+}
+
+.support-option p {
+    color: #777;
+    font-size: 13px;
+}
+
+.discord-button {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+
+    background: #5865f2;
+    color: white;
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 14px;
+
+    background: #08090d;
+
+    color: white;
+
+    border: 1px solid #292b35;
+
+    border-radius: 9px;
+
+    outline: none;
+}
+
+.form-group textarea {
+    height: 140px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #5865f2;
+}
+
+.submit-button {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #5865f2;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background: #4752c4;
+}
+
+.success {
+    display: none;
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    background: #10251c;
+
+    border: 1px solid #2d7a55;
+
+    color: #55d995;
+
+    text-align: center;
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+
+    border-top: 1px solid #242630;
+
+    color: #666;
+}
+
+footer span {
+    color: #5865f2;
+}
+
+@media(max-width: 800px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .support-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+        Discord <span>Bot Marketplace</span>
+    </div>
+
+    <div class="nav-links">
+
+        <a href="index.html">
+            Marketplace
+        </a>
+
+        <a href="support.html">
+            Support
+        </a>
+
+    </div>
+
+    <a href="index.html" class="back-button">
+        Marketplace
+    </a>
+
+</nav>
+
+
+<section class="hero">
+
+    <h1>
+        Need <span>Help?</span>
+    </h1>
+
+    <p>
+        Contact the Discord Bot Marketplace support team.
+        Send us your question or problem and we'll help you.
+    </p>
+
+</section>
+
+
+<section class="support-container">
+
+
+    <div class="card">
+
+        <h2>
+            Contact Support
+        </h2>
+
+        <p>
+            Choose the best way to contact our team.
+        </p>
+
+
+        <div class="support-option">
+
+            <h3>
+                🎫 Support Ticket
+            </h3>
+
+            <p>
+                Create a support request using the form.
+            </p>
+
+        </div>
+
+
+        <div class="support-option">
+
+            <h3>
+                💬 Discord Community
+            </h3>
+
+            <p>
+                Join our Discord community for help.
+            </p>
+
+        </div>
+
+
+        <div class="support-option">
+
+            <h3>
+                ⚡ Fast Support
+            </h3>
+
+            <p>
+                Our team will try to respond as quickly as possible.
+            </p>
+
+        </div>
+
+
+        <!-- ΒΑΛΕ ΕΔΩ ΤΟ ΔΙΚΟ ΣΟΥ DISCORD INVITE -->
+
+        <a
+            href="https://discord.gg/YOURSERVER"
+            target="_blank"
+            class="discord-button"
+        >
+
+            💬 Join our Discord
+
+        </a>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>
+            Create Support Request
+        </h2>
+
+        <p>
+            Fill out the form below.
+        </p>
+
+
+        <form id="supportForm">
+
+
+            <div class="form-group">
+
+                <label>
+                    Discord Username
+                </label>
+
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Your Discord username"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="your@email.com"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Category
+                </label>
+
+                <select id="category" required>
+
+                    <option value="">
+                        Select category
+                    </option>
+
+                    <option>
+                        Purchase Problem
+                    </option>
+
+                    <option>
+                        Bot Problem
+                    </option>
+
+                    <option>
+                        Technical Support
+                    </option>
+
+                    <option>
+                        Payment Problem
+                    </option>
+
+                    <option>
+                        Other
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Message
+                </label>
+
+                <textarea
+                    id="message"
+                    placeholder="Describe your problem..."
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="submit-button"
+            >
+
+                Send Support Request
+
+            </button>
+
+
+        </form>
+
+
+        <div
+            id="successMessage"
+            class="success"
+        >
+
+            ✅ Your support request was submitted!
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    © 2026
+    <span>
+        Discord Bot Marketplace
+    </span>
+
+</footer>
+
+
+<script>
+
+document
+.getElementById("supportForm")
+.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    document
+    .getElementById("successMessage")
+    .style.display = "block";
+
+    this.reset();
+
+});
+
+</script>
+
+</body>
+</html>
+```
 
 </body>
 </html>
